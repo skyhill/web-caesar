@@ -9,29 +9,41 @@ form = '''
 <html>
     <head>
         <style>
-            form {
+            form.caesar {
                 background-color: #eee;
                 padding: 20px;
-                margin: 0 auto:
-                width: 540px:
+                margin: 0 auto;
+                width: 50%;
+                text-align: center;
                 font: 16px sans-serif;
-                border-radius: 10px:
+                border-radius: 10px;
+            }
+            input, textarea, label, button {
+                display: block;
+                text-align: left;
+            }
+            input[type=text] {
+                width: 80%;
+                margin-bottom: 15px;
             }
             textarea {
-                margin: 10px 0;
-                width: 540px;
+                margin: 0 0 15px 0;
+                width: 80%;
+                max-width: 90%;
                 height: 120px;
             }
         </style>
     </head>
     <body>
-        <form action='/' method='POST'>
-            <label>
-                Rotate by: <input type='text' name='rot' value='0'>
-            </label>
+        <form class='caesar' action='/' method='POST'>
+            <label>Rotate by: </label>
+            <input type='text' name='rot' value='0'>
+            
+            <label> enter some text: </label>
             <textarea name='text'>
             </textarea>
-            <input type='submit'>Submit</button>
+           
+            <button type='submit'>Submit</button>
         </form>
     </body>
 </html>
